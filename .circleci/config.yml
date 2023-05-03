@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Install dependencies and build project
           command: |
-            apt-get update && apt-get install -y cmake && cmake . && make
+            apt-get update && apt-get install -y cmake && cmake .
       - run:
           name: Install build-wrapper
           command: |
