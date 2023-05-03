@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Build with build-wrapper
           command: |
-            mkdir -p bw-output && ./build-wrapper-linux-x86-64/build-wrapper-linux-x86-64 --out-dir bw-output make
+            mkdir -p bw-output && ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-output make
       - run:
           name: Run SonarCloud analysis
           command: sonar-scanner -Dsonar.projectKey=PhilippSchlehuberCaissier_sonartest -Dsonar.organization=philippschlehubercaissier -Dsonar.sources=. -Dsonar.cfamily.build-wrapper-output=bw-output
