@@ -12,6 +12,7 @@ jobs:
             apt-get update && apt-get install -y cmake && cmake .
             curl -L -o build-wrapper-linux-x86.zip https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
             mkdir -p bw-output
+            echo $(ls -al ./build-wrapper-linux-x86)
             ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-output make
             sonar-scanner -Dsonar.projectKey=PhilippSchlehuberCaissier_sonartest -Dsonar.organization=philippschlehubercaissier -Dsonar.sources=. -Dsonar.cfamily.build-wrapper-output=bw-output
 
